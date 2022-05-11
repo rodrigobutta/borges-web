@@ -121,7 +121,7 @@ export const useEntity = ({
   const { entity } = state;
 
   const handleSubmit = useCallback(
-    callback => async (e: any) => {
+    (callback: () => any) => async (e: any) => {
       if (e && e.preventDefault) {
         e.preventDefault();
         e.persist();
@@ -160,7 +160,7 @@ export const useEntity = ({
   );
 
   const handleSave = useCallback(
-    callback => async (e: any) => {
+    (callback: () => any) => async (e: any) => {
       if (e && e.preventDefault) {
         e.preventDefault();
         e.persist();

@@ -14,6 +14,7 @@ interface ISelectProps {
   className?: string;
   value: string;
   onChange: React.ChangeEventHandler<HTMLSelectElement>;
+  children?: any;
 }
 
 export default Select;

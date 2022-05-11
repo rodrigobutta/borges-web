@@ -6,6 +6,7 @@ import { Col, Input } from 'antd';
 
 import { IEmailFieldWrapper, getIsInvalidClassName } from '.';
 import { Form } from 'components-v2';
+import Group from 'antd/lib/input/Group';
 
 const EmailFieldWrapper: React.FC<IEmailFieldWrapper> = ({
   label,
@@ -19,7 +20,7 @@ const EmailFieldWrapper: React.FC<IEmailFieldWrapper> = ({
   if (!spanProportion) return <></>;
 
   return (
-    <Form.Group>
+    <Group>
       <Form.Group.Label span={spanProportion[0]} text={label} align={labelAlign} />
       <Col span={spanProportion[1]}>
         <Field name={name}>
@@ -29,7 +30,7 @@ const EmailFieldWrapper: React.FC<IEmailFieldWrapper> = ({
         </Field>
         {error && touched && <Form.Group.Help type='error' text={error} />}
       </Col>
-    </Form.Group>
+    </Group>
   );
 };
 

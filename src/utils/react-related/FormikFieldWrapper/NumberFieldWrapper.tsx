@@ -6,6 +6,7 @@ import { Col, Input } from 'antd';
 
 import { INumberFieldWrapper, getIsInvalidClassName } from '.';
 import { Form } from 'components-v2';
+import Group from 'antd/lib/input/Group';
 
 const NumberFieldWrapper: React.FC<INumberFieldWrapper> = ({
   label,
@@ -19,7 +20,7 @@ const NumberFieldWrapper: React.FC<INumberFieldWrapper> = ({
   if (!spanProportion) return <></>;
 
   return (
-    <Form.Group>
+    <Group>
       <Form.Group.Label span={spanProportion[0]} text={label} align={labelAlign} />
       <Col span={spanProportion[1]}>
         <Field name={name}>
@@ -29,7 +30,7 @@ const NumberFieldWrapper: React.FC<INumberFieldWrapper> = ({
         </Field>
         {error && touched && <Form.Group.Help type='error' text={error} />}
       </Col>
-    </Form.Group>
+    </Group>
   );
 };
 

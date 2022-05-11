@@ -7,7 +7,7 @@ import { Col } from 'antd';
 import { Form } from 'components-v2';
 
 import { useAxios } from 'hooks';
-
+import Group from 'antd/lib/input/Group';
 import { IStateSelectFieldWrapper, getIsInvalidClassName } from '../.';
 
 const StateSelectFieldWrapper: React.FC<IStateSelectFieldWrapper> = ({
@@ -36,7 +36,7 @@ const StateSelectFieldWrapper: React.FC<IStateSelectFieldWrapper> = ({
   if (!spanProportion) return <></>;
 
   return (
-    <Form.Group>
+    <Group>
       <Form.Group.Label span={spanProportion[0]} text={label} align={labelAlign} />
       <Col span={spanProportion[1]}>
         <Field name={name}>
@@ -53,7 +53,7 @@ const StateSelectFieldWrapper: React.FC<IStateSelectFieldWrapper> = ({
         </Field>
         {error && touched && <Form.Group.Help type='error' text={error} />}
       </Col>
-    </Form.Group>
+    </Group>
   );
 };
 

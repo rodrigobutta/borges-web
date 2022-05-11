@@ -9,6 +9,7 @@ interface IFormGroupLabelProps {
   span?: number;
   text: string;
   align?: 'left' | 'right';
+  children?: any;
 }
 
 const FormGroupLabel: FC<IFormGroupLabelProps> = ({ className, children, text, align, ...props }) => {

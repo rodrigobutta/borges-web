@@ -6,6 +6,7 @@ interface IFormGroupHelpProps {
   className?: string;
   text: string;
   type?: 'error' | 'warning';
+  children?: any;
 }
 
 const FormGroupHelp: FC<IFormGroupHelpProps> = ({ className, children, text, type, ...props }) => {

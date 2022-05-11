@@ -6,6 +6,7 @@ import { Col, Input } from 'antd';
 
 import { ITextFieldWrapper, getIsInvalidClassName } from '.';
 import { Form } from 'components-v2';
+import Group from 'antd/lib/input/Group';
 
 const TextFieldWrapper: React.FC<ITextFieldWrapper> = ({
   label,
@@ -19,7 +20,7 @@ const TextFieldWrapper: React.FC<ITextFieldWrapper> = ({
   if (!spanProportion) return <></>;
 
   return (
-    <Form.Group>
+    <Group>
       <Form.Group.Label span={spanProportion[0]} text={label} align={labelAlign} />
       <Col span={spanProportion[1]}>
         <Field name={name}>
@@ -29,7 +30,7 @@ const TextFieldWrapper: React.FC<ITextFieldWrapper> = ({
         </Field>
         {error && touched && <Form.Group.Help type='error' text={error} />}
       </Col>
-    </Form.Group>
+    </Group>
   );
 };
 

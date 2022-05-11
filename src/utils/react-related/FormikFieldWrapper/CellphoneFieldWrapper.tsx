@@ -7,6 +7,7 @@ import { Col } from 'antd';
 import { ICellphoneFieldWrapper, getIsInvalidClassName } from '../.';
 import { Form } from 'components-v2';
 import { MaskedInput } from 'antd-mask-input';
+import Group from 'antd/lib/input/Group';
 
 // TODO: Pass regex replacements functions to index
 const CellphoneFieldWrapper: React.FC<ICellphoneFieldWrapper> = ({
@@ -32,7 +33,7 @@ const CellphoneFieldWrapper: React.FC<ICellphoneFieldWrapper> = ({
   if (!spanProportion) return <></>;
 
   return (
-    <Form.Group>
+    <Group>
       <Form.Group.Label span={spanProportion[0]} text={label} align={labelAlign} />
       <Col span={spanProportion[1]}>
         <Field name={name}>
@@ -55,7 +56,7 @@ const CellphoneFieldWrapper: React.FC<ICellphoneFieldWrapper> = ({
         </Field>
         {error && touched && <Form.Group.Help type='error' text={error} />}
       </Col>
-    </Form.Group>
+    </Group>
   );
 };
 

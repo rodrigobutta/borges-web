@@ -13,6 +13,7 @@ const FormGroup: IFormGroupFC<IFormGroupProps> = ({ className, children }) => {
 
 interface IFormGroupProps {
   className?: string;
+  children?: any;
 }
 
 type IFormGroupFC<P> = FC<P> & {
