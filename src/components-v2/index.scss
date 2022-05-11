@@ -1,0 +1,11 @@
+$upload-box-border-color: #33bbe1;
+$upload-box-text-color: #33bbe1;
+$label-color: #33bbe1;
+$label-font-weight: 600;
+
+@import './Form/index.scss';
+@import './Upload/index.scss';
+
+button {
+  cursor: pointer;
+}

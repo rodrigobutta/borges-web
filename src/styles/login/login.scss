@@ -1,0 +1,48 @@
+.login {
+  background: #eae9e9;
+  background-size: cover;
+}
+
+.login-form-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.ant-form.login-form {
+  border-radius: 0.3125rem;
+  background-color: #fff;
+  border: solid 1px transparent;
+  width: 100%;
+  height: 440px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.text-register {
+  font-size: 21px;
+}
+.register-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 7vh;
+  width: 100%;
+}
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  margin: auto;
+  flex-direction: column;
+  height: 100vh;
+}
+.login-logo {
+  margin-bottom: 50px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container-login {
+    width: auto;
+  }
+}

@@ -1,0 +1,48 @@
+version: 0.2
+
+# env:
+#   variables:
+#     REACT_APP_BORGES_DEALERS_API_ENDPOINT: "http://localapi.testtttt.com:333"
+#     test: "aaaa"
+#   exported-variables:
+#     - REACT_APP_BORGES_DEALERS_API_ENDPOINT
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      #   - echo Installing Mocha...
+      #   - npm install -g mocha
+      - npm install -g create-react-app@latest
+  pre_build:
+    commands:
+      - pip3 install awscli --upgrade --user
+      - aws codeartifact login --tool npm --domain aracar  --domain-owner 120156528228 --repository aracar --namespace @aracar
+      # - export REACT_APP_BORGES_DEALERS_API_ENDPOINT='http://uy.api.aracargroup.com/'
+      - echo Installing source NPM dependencies...
+      - npm install
+  build:
+    commands:
+      - npm install -g create-react-app@latest
+      - npm install node-sass@5.0.0
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      - npm run build
+      # - mocha test.js // if error here???
+  post_build:
+    commands:
+      - echo Build completed on `date`
+# Include only the files required for your application to run.
+# Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages
+# used only for building and testing.
+# ExpressJS apps will need other artifact directories included (bin/*, public/*, routes/*, views/* etc).
+artifacts:
+  files:
+    - '**/*'
+    # - src/**/*
+    # - public/**/*
+    # - package.json
+    # - node_modules/async/*
+    # - node_modules/lodash/*
+  enable-symlinks: yes

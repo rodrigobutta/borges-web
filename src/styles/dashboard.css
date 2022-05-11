@@ -1,0 +1,32 @@
+.tile-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+  align-items: start;
+  height: 100%;
+}
+.tile-wrapper > div > div:nth-child(2) {
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .tile-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .tile-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+}

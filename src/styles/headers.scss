@@ -1,0 +1,76 @@
+/* ==========================================================================
+   header.css
+   ========================================================================== */
+
+.ant-layout-header {
+  background-color: #3f4e68;
+  color: #fff;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  line-height: 1.1;
+  position: fixed;
+  z-index: 1001;
+}
+
+.ant-layout-header .user {
+  text-align: right;
+}
+
+.ant-avatar {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  list-style: none;
+  -webkit-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum';
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background: #ccc;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+}
+
+.user .ant-avatar > img {
+  width: 100%;
+}
+
+.ant-layout-header .user strong {
+  margin-right: 0.5rem;
+}
+
+.ant-layout-header .user .ant-btn {
+  border: none;
+  color: #fff;
+  padding-left: 0.625rem;
+  padding-right: 1.5rem;
+  position: relative;
+}
+
+.ant-layout-header .user .ant-btn .anticon {
+  position: absolute;
+  top: 0.75rem;
+  right: 0;
+}
+
+.ant-layout-header .user .ant-btn .anticon + span {
+  margin-left: 0;
+}
+
+.ant-layout-header .user .ant-btn .anticon:hover {
+  color: #fff;
+}
+
+.logo {
+  margin-right: 2.6875rem;
+}

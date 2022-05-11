@@ -1,0 +1,98 @@
+.card-car-row {
+  width: 100%;
+  border-top: 1px solid #e7e7e7;
+  margin: 0.5rem 0;
+  padding: 10px 15px 5px;
+}
+
+.car-card.selectable:hover {
+  position: relative;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+.card-item-label {
+  color: #2ea9cb;
+  font-size: 14px;
+}
+
+.card-car-body-detail-loan-options {
+  padding-top: 15px;
+  height: 60%;
+  display: inline-flex;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.card-car-body-detail-loan-option {
+  width: 24%;
+  min-height: 86px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #33bbe1;
+  font-size: 13px;
+  margin-right: 1%;
+  border-radius: 4px;
+  padding: 5px;
+  height: calc(100% - 20px);
+  color: #33bbe1;
+}
+
+.card-car-body-detail-loan-option:hover {
+  cursor: pointer;
+  background-color: #33bbe1;
+  color: white;
+}
+
+.card-car-body-detail-loan-option.selected {
+  cursor: pointer;
+  background-color: #33bbe1;
+  color: white;
+}
+.rating-star-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: #33bbe1;
+}
+
+.rating-star-icon:hover {
+  zoom: 1.25;
+}
+
+.img-container-car-detail {
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 5px solid #ededed;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.remove-favourite-icon {
+  position: absolute;
+  border: none;
+  top: 10px;
+  left: 12px;
+  color: #bd070ce0;
+  font-size: 23px;
+  display: none;
+  z-index: 1;
+  background: white;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+div.car-card {
+  position: relative;
+}
+
+.car-card:hover .remove-favourite-icon {
+  display: inherit;
+}

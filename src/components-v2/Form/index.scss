@@ -1,0 +1,76 @@
+.aracar-form__select {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-variant: tabular-nums;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  padding: 4px 11px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 1.5715;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  transition: all 0.3s;
+  overflow: hidden;
+
+  &:focus {
+    box-shadow: 0 0 0 1px rgb(44 51 87 / 20%);
+    border-right-width: 1px !important;
+    outline: 0;
+  }
+
+  &:placeholder-shown {
+    text-overflow: ellipsis;
+  }
+
+  &.is-invalid {
+    border-color: #f64e60;
+  }
+}
+
+.aracar-form__group {
+  margin-bottom: 0.5rem;
+  align-items: center;
+
+  .aracar-form__group__label {
+    // padding-top: 8px;
+    padding-right: 10px;
+    font-size: 12px;
+    font-weight: $label-font-weight;
+    color: $label-color;
+
+    &.label-left {
+      text-align: left;
+    }
+
+    &.label-right {
+      text-align: right;
+    }
+  }
+
+  input {
+    &.is-invalid {
+      border-color: #f64e60;
+    }
+  }
+
+  .group-help {
+    font-size: 11px;
+    font-weight: 400;
+    color: #6c757d;
+
+    &.group-help--error {
+      color: #f64e60;
+    }
+
+    &.group-help--warning {
+      color: #ffa800;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+/* ==========================================================================
+   sidebar.css
+   ========================================================================== */
+
+.sidebar {
+  background-color: #3f4e68;
+  overflow-y: auto;
+  padding-top: 33px;
+  position: fixed !important;
+  height: 100% !important;
+  z-index: 2;
+}
+
+.sidebar + .main-content {
+  margin-left: 220px;
+  transition: margin-left 1s 1s 1s;
+}
+
+.sidebar.ant-layout-sider-collapsed + .main-content {
+  margin-left: 80px;
+  transition: margin-left 1s 1s 1s;
+}
+
+.sidebar .ant-menu {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  font-feature-settings: "tnum", "tnum";
+  margin-bottom: 0;
+  padding-left: 0;
+  color: #9fb1c7;
+  font-size: 14px;
+  line-height: 0;
+  text-align: left;
+  list-style: none;
+  outline: none;
+  /* box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%); */
+  /* transition: background 0.3s, width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s; */
+}
+
+.sidebar .ant-menu-item a {
+  color: #9fb1c7;
+}
+
+.sidebar .ant-menu-item-selected {
+  color: inherit;
+}
+
+.sidebar .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: transparent;
+}

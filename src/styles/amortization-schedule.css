@@ -1,0 +1,30 @@
+/* ==========================================================================
+   amortization-schedule.css
+   ========================================================================== */
+
+.amortization-schedule__title {
+  color: var(--brand-text-primary-color);
+}
+
+table.amortization-schedule {
+  height: 69vh;
+  display: block;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-bottom: 20px;
+  min-width: 1100px;
+}
+
+table.amortization-schedule tbody tr td {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: right;
+}
+
+table.amortization-schedule tr th {
+  padding: 0 0.8rem;
+}
+
+table.amortization-schedule tbody tr td:last-child {
+  font-weight: bold;
+}

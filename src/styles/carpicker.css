@@ -1,0 +1,122 @@
+:root {
+  --blue: #01355b;
+  --cyan: #0098b0;
+  ---bacground-gradient-1: var(--blue);
+  --background-gradient-2: var(--cyan);
+}
+
+.car-picker__button {
+  background: linear-gradient(
+    to right,
+    var(---bacground-gradient-1) 0%,
+    var(--background-gradient-2) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7e0859', endColorstr='#600049',GradientType=1 ); /* IE6-9 */
+  -moz-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.13);
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.13);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.2rem;
+  height: 70px;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 1rem;
+}
+
+.car-picker__button.selected {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.car-picker__button.selected {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  color: #3f3f3f;
+}
+
+.car-picker__button-text {
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+}
+@media screen and (min-width: 380px) {
+  .car-picker__button-text {
+    font-size: 1.125rem;
+  }
+}
+
+.car-picker-option {
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+  font-size: 0.9375rem;
+  margin: 0 0 8px 0;
+  padding: 0.875rem 0.75rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.car-picker-option:hover,
+.car-picker-option:active {
+  background: #2c3357;
+  color: white;
+}
+
+.picker-car-label {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #3f3f3f;
+}
+
+.picker-car-label img {
+  margin-right: 10px;
+  width: 50px;
+}
+
+.picker-car-label p {
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+.picker-car-label p:last-child {
+  color: #2c3357;
+}
+
+/*new styles*/
+.picker-field {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 7px 11px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+  line-height: 25px;
+  min-height: 38px;
+  background-color: #fff;
+}
+
+.picker-field:hover {
+  border: 1px solid #2c3357;
+}
+
+.picker-field.has-value {
+  color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+}
+
+.picker-field-arrow:hover {
+  color: #2c3357;
+}

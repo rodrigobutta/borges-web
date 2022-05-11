@@ -1,0 +1,7 @@
+:root {
+  --space-cadet: #2c3357;
+}
+
+a {
+  color: var(--space-cadet);
+}

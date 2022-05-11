@@ -1,0 +1,85 @@
+.edit-management-sticky-header--container {
+  padding-top: 40px;
+
+  // > div {
+  //   align-items: center;
+  // }
+
+  .edit-management-sticky-header {
+    margin-bottom: 0.25rem;
+    background-color: #f0f2f5;
+    height: 50px;
+
+    position: fixed;
+    top: 64px;
+    z-index: 10;
+    width: calc(100% - 220px);
+    left: 220px;
+    animation-duration: 1.2s;
+    animation-name: 'edit-management-sticky-header--sidebarShown';
+    padding: 0.5rem;
+
+    > div {
+      display: flex;
+
+      .actions-button--container {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        .actions-button--v-divider {
+          display: inline-block;
+          margin: 0 7.5px;
+          width: 2px;
+          border-left: 2px solid #d5d5d5;
+          height: 75%;
+
+          & + button {
+            margin-left: 0;
+          }
+        }
+
+        button {
+          margin-left: 0.2rem;
+        }
+      }
+    }
+  }
+}
+
+.body-sidebar-collapsed {
+  .edit-management-sticky-header--container {
+    .edit-management-sticky-header {
+      width: calc(100% - 80px);
+      left: 80px;
+      animation-duration: 1.2s;
+      animation-name: 'edit-management-sticky-header--sidebarHidden';
+    }
+  }
+}
+
+@keyframes edit-management-sticky-header--sidebarShown {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  to {
+    width: calc(100% - 220px);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes edit-management-sticky-header--sidebarHidden {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  to {
+    width: calc(100% - 80px);
+    visibility: visible;
+    opacity: 1;
+  }
+}

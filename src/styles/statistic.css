@@ -1,0 +1,55 @@
+:root {
+  --blue-Light: #33bbe1;
+}
+
+.composition-inner {
+  display: flex;
+}
+
+.composition {
+  display: flex;
+  margin-left: 10px;
+  flex-wrap: wrap;
+}
+.composition:first-of-type {
+  margin-left: 0;
+}
+
+.composition h1 {
+  margin: 0;
+}
+
+.statistic {
+  margin-right: 8px;
+  min-width: 120px;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--blue-Light);
+  border-radius: 5px;
+}
+
+.statistic h3 {
+  color: #2c3357;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.statistic p {
+  color: grey;
+  margin-bottom: 8px;
+}
+
+.statistic.active,
+.statistic:hover {
+  background-color: var(--blue-Light);
+}
+
+.statistic.active h3,
+.statistic:hover h3,
+.statistic.active p,
+.statistic:hover p {
+  color: white;
+}
